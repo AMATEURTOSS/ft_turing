@@ -1,4 +1,4 @@
-import { Description, ExecuteContext } from "./@types";
+import { Description, ExecuteContext } from "../@types";
 
 export function runProgram(description: Description, input: string) {
   const executeContext: ExecuteContext = {

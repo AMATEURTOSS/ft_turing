@@ -1,7 +1,7 @@
 import { program } from "commander";
 import { parse } from "./parse";
 import { printTitle, printProgramDescription } from "./print";
-import { runProgram } from "./runProgram";
+import { runProgram } from "./run-program";
 
 function main() {
   program
