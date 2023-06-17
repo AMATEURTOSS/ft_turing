@@ -1,4 +1,4 @@
-import { printPartition } from "@utils";
+import { printPartition } from "../@utils";
 
 export function printTitle(title: string) {
   const titleLength = 78;
@@ -9,7 +9,7 @@ export function printTitle(title: string) {
   console.log(
     `*                                                                              *\n` +
       `*${title}*\n` +
-      `*                                                                              *\n`
+      `*                                                                              *`
   );
   printPartition();
 }

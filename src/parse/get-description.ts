@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { Description } from "@types";
+import { Description } from "../@types";
 
 export function getDescription(jsonFilePath: string): Description {
   const fd = fs.readFileSync(jsonFilePath);

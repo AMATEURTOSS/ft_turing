@@ -1,6 +1,6 @@
 import { forEach } from "lodash";
-import { Description } from "@types";
-import { printPartition } from "@utils";
+import { Description } from "../@types";
+import { printPartition } from "../@utils";
 
 function printAlphabet(alphabet: string[]): void {
   console.log(`Alphabet: [ ${alphabet} ]`);

@@ -1,4 +1,4 @@
-import { Description } from "@types";
+import { Description } from "../@types";
 import { printTitle } from "./print-title";
 import { printProgramDescription } from "./print-program-description";
 

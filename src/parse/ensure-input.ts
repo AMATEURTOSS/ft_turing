@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { Description } from "@types";
+import { Description } from "../@types";
 import { InvalidInputError } from "../@errors";
 
 // description.alphabet배열에 없는 알파벳이 input에 들어있는지 확인
