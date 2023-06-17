@@ -2,27 +2,27 @@
   "name"   : "unary_sub",
   "alphabet": [ "1", ".", "-", "=" ],
   "blank"  : ".",
-  "states" : [ "scan_right", "erase_one", "sub_one", "skip", "HALT" ],
-  "initial" : "scan_right",
+  "states" : [ "scanRight", "eraseOne", "subOne", "skip", "HALT" ],
+  "initial" : "scanRight",
   "finals" : [ "HALT" ],
   "transitions" : {
-    "scan_right": [
-      { "read" : ".", "to_state": "scan_right", "write": ".", "action": "RIGHT"},
-      { "read" : "1", "to_state": "scan_right", "write": "1", "action": "RIGHT"},
-      { "read" : "-", "to_state": "scan_right", "write": "-", "action": "RIGHT"},
-      { "read" : "=", "to_state": "erase_one" , "write": ".", "action": "LEFT" }
+    "scanRight": [
+      { "read" : ".", "toState": "scanRight", "write": ".", "action": "RIGHT"},
+      { "read" : "1", "toState": "scanRight", "write": "1", "action": "RIGHT"},
+      { "read" : "-", "toState": "scanRight", "write": "-", "action": "RIGHT"},
+      { "read" : "=", "toState": "eraseOne" , "write": ".", "action": "LEFT" }
     ],
-    "erase_one": [
-      { "read" : "1", "to_state": "sub_one", "write": "=", "action": "LEFT"},
-      { "read" : "-", "to_state": "HALT" , "write": ".", "action": "LEFT"}
+    "eraseOne": [
+      { "read" : "1", "toState": "subOne", "write": "=", "action": "LEFT"},
+      { "read" : "-", "toState": "HALT" , "write": ".", "action": "LEFT"}
     ],
-    "sub_one": [
-      { "read" : "1", "to_state": "sub_one", "write": "1", "action": "LEFT"},
-      { "read" : "-", "to_state": "skip" , "write": "-", "action": "LEFT"}
+    "subOne": [
+      { "read" : "1", "toState": "subOne", "write": "1", "action": "LEFT"},
+      { "read" : "-", "toState": "skip" , "write": "-", "action": "LEFT"}
     ],
     "skip": [
-      { "read" : ".", "to_state": "skip" , "write": ".", "action": "LEFT"},
-      { "read" : "1", "to_state": "scan_right", "write": ".", "action": "RIGHT"}
+      { "read" : ".", "toState": "skip" , "write": ".", "action": "LEFT"},
+      { "read" : "1", "toState": "scanRight", "write": ".", "action": "RIGHT"}
     ]
   }
 }
