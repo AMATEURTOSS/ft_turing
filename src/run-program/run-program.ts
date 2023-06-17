@@ -2,7 +2,7 @@ import { Description, ExecuteContext } from "../@types";
 import { readHead } from "./read-head";
 import { printProgramStatus } from "../print/print-program-status";
 import { action } from "./action";
-import { includes } from "lodash";
+import { includes, padEnd } from "lodash";
 
 export function runProgram(description: Description, input: string) {
   const executeContext: ExecuteContext = {
@@ -11,7 +11,7 @@ export function runProgram(description: Description, input: string) {
     description,
     // variables
     head: 0,
-    memory: input.split(""),
+    memory: padEnd(input, 20,description.blank).split(""),
     state: description.initial,
     nextBehavior: null as any,
     // methods
