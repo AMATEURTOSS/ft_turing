@@ -1,5 +1,6 @@
 import { program } from "commander";
 import { parse } from "./parse";
+import { execute } from "./execute";
 
 function main() {
   program
@@ -8,6 +9,8 @@ function main() {
     .parse();
 
   const { description, input } = parse(program.args[0], program.args[1]);
+
+  execute(description, input);
 }
 
 try {
