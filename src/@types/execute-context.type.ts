@@ -9,9 +9,10 @@ export type ExecuteContext = {
   head: number;
   memory: string[];
   state: string;
-  nextBehavior: Description["transitions"][string][number] | null;
+  nextBehavior: Description["transitions"][string][number];
 
   // methods
   readHead: () => ExecuteContext;
   printProgramStatus: () => ExecuteContext;
+  action: () => ExecuteContext;
 }
