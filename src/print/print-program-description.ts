@@ -28,7 +28,7 @@ function printTransitions(transitions: Description["transitions"]): void {
   });
 }
 
-export function printProgramDescription(description: Description) {
+export function printProgramDescription(description: Description)  {
   printAlphabet(description.alphabet);
   printStates(description.states);
   printInitial(description.initial);

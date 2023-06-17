@@ -1,6 +1,7 @@
 import { program } from "commander";
 import { parse } from "./parse";
-import { execute } from "./execute";
+import { printTitle, printProgramDescription } from "./print";
+import { runProgram } from "./runProgram";
 
 function main() {
   program
@@ -10,7 +11,10 @@ function main() {
 
   const { description, input } = parse(program.args[0], program.args[1]);
 
-  execute(description, input);
+  printTitle(description.name)
+  printProgramDescription(description)
+
+  runProgram(description, input)
 }
 
 try {
